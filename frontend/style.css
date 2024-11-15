@@ -1,6 +1,6 @@
-html{
+/* html{
     scroll-behavior: smooth;
-}
+} */
 
 *{
     margin : 0;
@@ -113,7 +113,7 @@ body{
     letter-spacing: 2px;
 }
 
-.other-details{
+#other-details{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -141,4 +141,55 @@ body{
     letter-spacing: 2px;
     font-weight: 500;
     cursor: pointer;
+}
+
+#user-Div{
+    width:300px;
+    /* margin:  */
+    color: #caf0f8;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    position: relative;
+}
+
+#user-token{
+    width:fit-content;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+#user-Div p{
+    margin: 5px 0px 5px 0px;
+}
+
+#logout{
+    margin: 20px;
+    margin-left: 25px;
+    background-color: #ffb703;
+    border: 1px solid #03045e;
+    /* height: 26px; */
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    cursor: pointer;
+    position: absolute;
+    left: 65%;
+}
+
+#home-page{
+    width : 300px;
+}
+
+#home-cont{
+    color: #ffb703;
+    text-shadow: 2px 2px #03045e;
+    word-wrap: break-word;
+    word-break: break-word;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 400;
 }

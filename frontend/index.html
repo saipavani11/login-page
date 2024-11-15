@@ -10,29 +10,41 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"> </script>
+
     <title>SIGNIN page</title>
 </head>
+
 <body>
     <div id = "container">
         <div class="login-header">
-                <h2>Sign In</h2>    
+                <h2 id="heading">Sign In</h2>    
         </div>
-        <div class="login">
+        <div class="login" id = "loggerpage">
+            
             <p class = "login-details">username:</p>
-            <input type = "text" class = "btn-layout" lable = "username">
+            <input type = "text" class = "btn-layout" id = "username">
+            
             <p class = "login-details">password:</p>
-            <input type = "password" class = "btn-layout" lable = "password">
+            <input type = "password" class = "btn-layout" id = "password">
+            
             <div>
-                <button id="login-btn" class = "btn-layout">sign-in</button>
+                <button id="login-btn" class = "btn-layout">sign in</button>
             </div>
+        
         </div>
-        <div class="other-details">
-            <div id="newpassw">
+        
+        <div id="other-details">
+        
+            <div id="newpassw" class = "additionals">
                 <a>forgot password?</a>
             </div>
+        
             <div >
                 <button id="sign-up-btn" class="btn-layout">sign-up</button>
             </div>
+        
         </div>
     </div>
 </body>

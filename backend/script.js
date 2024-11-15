@@ -1,9 +1,16 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const jwt = require('jsonwebtoken');
 const JWT_SECRET = 'myfirstloginpage';
 
 let users = [];
+
+app.use(express.static(path.join(__dirname, '..', 'frontend')));
+
+app.get("/", (req,res)=>{
+    res.sendFile(path.join(__dirname, '..', 'frontend', 'index.html'));
+})
 
 function auth(req,res,next){
     // const username = req.body.username;
@@ -100,8 +107,10 @@ app.get("/me", auth, (req,res)=>{
         let user = users.find(u => u.username === username);
         if(user){
             res.json({
-                message: "user exists"
-            })
+                message: "user exists",
+                username: user.username,
+                token: user.token
+            });
             console.log(user);
         }else{
             res.status(401).json({
@@ -115,4 +124,4 @@ app.get("/me", auth, (req,res)=>{
     }
 })
 
-app.listen(3000);
+app.listen(3004);
